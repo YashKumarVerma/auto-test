@@ -10,6 +10,11 @@ run:
 	@echo "Running...\n\n"
 	# could be go run src/main.go for golang
 	# could be poetry run python manage.py runserver for django/python
+	# ensure that this server runs in background
 	@echo "\n"
 
-.PHONY: build run
+test:
+	@echo "Testing...\n\n"
+	npm test
+
+.PHONY: build run test

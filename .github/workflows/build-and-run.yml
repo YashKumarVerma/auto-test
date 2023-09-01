@@ -18,7 +18,7 @@ jobs:
 
       - name: Install dependencies (if needed)
         run: |
-          curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+          curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
           sudo apt-get install -y nodejs
 
       - name: Build
@@ -26,3 +26,6 @@ jobs:
 
       - name: Run
         run: make run
+
+      - name: Test
+        run: make test
