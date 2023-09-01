@@ -3,7 +3,7 @@ build:
 	@echo "Building...\n\n"
 	# could be go build src/main.go for golang
 	# could be poetry install for django/python
-	@echo "\n"
+	npm install
 
 # Commands required to run the project
 run:
