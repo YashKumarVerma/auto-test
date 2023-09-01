@@ -1,0 +1,28 @@
+name: Build and Run
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name if necessary
+  pull_request:
+    branches:
+      - main  # Change this to your main branch name if necessary
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest  # You can change the runner as needed
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies (if needed)
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+
+      - name: Build
+        run: make build
+
+      - name: Run
+        run: make run
